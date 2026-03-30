@@ -330,5 +330,42 @@ var palettes = [
             '--color-facet-8': '#6D28D9', '--color-facet-10': '#5B21B6', '--color-facet-14': '#8B5CF6',
             '--color-facet-15': '#7C3AED'
         }
+    },
+    {
+        name: "28. Crystal Glass Diamond",
+        tokens: {
+            '--color-stroke-all': '#5F9EA0', '--color-fill-center': '#FFFFFF',
+            '--color-facet-1': '#B0E0E6', '--color-facet-12': '#4682B4', '--color-facet-13': '#000080',
+            '--color-facet-3': '#E0FFFF', '--color-facet-5': '#F0FFFF', '--color-facet-7': '#E0FFFF',
+            '--color-facet-9': '#AFEEEE', '--color-facet-11': '#F0FFFF',
+            '--color-facet-2': '#87CEEB', '--color-facet-4': '#AFEEEE', '--color-facet-6': '#00CED1',
+            '--color-facet-8': '#48D1CC', '--color-facet-10': '#20B2AA', '--color-facet-14': '#00CED1',
+            '--color-facet-15': '#87CEEB',
+        }
+    },
+    {
+        name: "29. Transparent Crystal Glass Diamond",
+        tokens: {
+            '--color-stroke-all': '#B0C4DE', '--color-fill-center': '#FFFFFF',
+            '--color-facet-1': '#E6F3FF', '--color-facet-12': '#6495ED', '--color-facet-13': '#0000FF',
+            '--color-facet-3': '#F0FFFF', '--color-facet-5': '#F5FFFF', '--color-facet-7': '#F0FFFF',
+            '--color-facet-9': '#E0FFFF', '--color-facet-11': '#F5FFFF',
+            '--color-facet-2': '#B0E0E6', '--color-facet-4': '#E0FFFF', '--color-facet-6': '#87CEFA',
+            '--color-facet-8': '#AFEEEE', '--color-facet-10': '#87CEEB', '--color-facet-14': '#87CEFA',
+            '--color-facet-15': '#B0E0E6',
+        }
+    },
+    // facet3: F0FFFF, facet7: #F0FFFF
+    {
+        name: "30. Real Diamond Clarity",
+        tokens: {
+            '--color-stroke-all': '#B0C4DE', '--color-fill-center': '#FFFFFF',
+            '--color-facet-1': '#E6F3FF', '--color-facet-12': '#8A2BE2', '--color-facet-13': '#8A2BE2',
+            '--color-facet-3': '#ffd79f', '--color-facet-5': '#F5FFFF', '--color-facet-7': '#ffd79f',
+            '--color-facet-9': '#E0FFFF', '--color-facet-11': '#F5FFFF',
+            '--color-facet-2': '#B0E0E6', '--color-facet-4': '#E0FFFF', '--color-facet-6': '#87CEFA',
+            '--color-facet-8': '#AFEEEE', '--color-facet-10': '#87CEEB', '--color-facet-14': '#87CEFA',
+            '--color-facet-15': '#B0E0E6',
+        }
     }
 ];
