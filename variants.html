@@ -40,7 +40,7 @@
       OPTIMIZATION: We define the markup ONCE using a <template>. 
     -->
     <template id="card-template">
-        <div class="logo-card bg-white rounded-2xl shadow-sm border border-slate-200 p-2 flex flex-col items-center gap-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="logo-card bg-white rounded-2xl shadow-sm border border-slate-200 p-2 flex flex-col items-center gap-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 justify-between">
             
             <div class="svg-container w-48 h-48 flex items-center justify-center relative">
                 <!-- Your highly detailed SVG mapped perfectly to 15 incremental design tokens -->
@@ -80,9 +80,13 @@
             
             <div class="text-center w-full bg-slate-50 p-4 rounded-xl card-footer">
                 <h3 class="text-lg font-bold text-slate-800 variant-name w-48 mb-3"></h3>
-                <div class="flex justify-center gap-1.5 palette-dots">
+                <div class="flex justify-center gap-1.5 palette-dots mb-3">
                     <!-- Dots injected via JS -->
                 </div>
+                <button class="copy-btn px-3 py-1.5 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center gap-1.5 mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy SVG
+                </button>
             </div>
         </div>
     </template>
@@ -127,6 +131,58 @@
                         }
                     }
                 }
+
+                const copyBtn = clone.querySelector('.copy-btn');
+                copyBtn.addEventListener('click', () => {
+                    const svgElement = cardElement.querySelector('.logo-svg');
+                    const svgClone = svgElement.cloneNode(true);
+                    
+                    // Get computed styles and replace CSS variables with actual values
+                    const computedStyles = window.getComputedStyle(cardElement);
+                    const colorTokens = [
+                        '--color-facet-1', '--color-facet-2', '--color-facet-3', '--color-facet-4',
+                        '--color-facet-5', '--color-facet-6', '--color-facet-7', '--color-facet-8',
+                        '--color-facet-9', '--color-facet-10', '--color-facet-11', '--color-facet-12',
+                        '--color-facet-13', '--color-facet-14', '--color-facet-15',
+                        '--color-fill-center', '--color-stroke-all'
+                    ];
+                    
+                    const colorMap = {};
+                    colorTokens.forEach(token => {
+                        colorMap[`var(${token})`] = computedStyles.getPropertyValue(token).trim();
+                    });
+                    
+                    // Replace CSS variable references with actual color values
+                    svgClone.querySelectorAll('*').forEach(el => {
+                        const fill = el.getAttribute('fill');
+                        if (fill && colorMap[fill]) {
+                            el.setAttribute('fill', colorMap[fill]);
+                        }
+                        const stroke = el.getAttribute('stroke');
+                        if (stroke && colorMap[stroke]) {
+                            el.setAttribute('stroke', colorMap[stroke]);
+                        }
+                    });
+                    
+                    // Serialize SVG and copy to clipboard
+                    const svgString = new XMLSerializer().serializeToString(svgClone);
+                    navigator.clipboard.writeText(svgString).then(() => {
+                        copyBtn.innerHTML = `
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Copied!
+                        `;
+                        copyBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                        copyBtn.classList.add('bg-green-600', 'hover:bg-green-700');
+                        setTimeout(() => {
+                            copyBtn.innerHTML = `
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                Copy SVG
+                            `;
+                            copyBtn.classList.remove('bg-green-600', 'hover:bg-green-700');
+                            copyBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                        }, 2000);
+                    });
+                });
 
                 container.appendChild(clone);
             });
