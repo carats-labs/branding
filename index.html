@@ -1,7 +1,756 @@
-<img height=200 src="gemini.svg"/>
-<img height=200 src="carats-v1.svg"/>
-<img height=200 src="v2.svg"/>
-<img height=200 src="v3.svg"/>
-<img height=200 src="v4.svg"/>
-<img height=200 src="v4-optimized.svg"/>
-<img height=200 src="sapphire-amethyst-variant.svg"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carats · Press Kit</title>
+<meta name="description" content="Official Carats press kit: logos, colours, typography, boilerplate and company facts for editors, reviewers and partners.">
+<meta name="theme-color" content="#07070a">
+<meta property="og:title" content="Carats · Press Kit">
+<meta property="og:description" content="Official marks, colours, typography and company facts for editors, reviewers and partners.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="v5.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --ink:#07070a;
+  --surface:#0e0e14;
+  --raised:#12121a;
+  --line:rgba(255,255,255,.08);
+  --line-strong:rgba(255,255,255,.16);
+  --text:#ececf1;
+  --text-soft:#cfcfd8;
+  --muted:#8b8b9c;
+  --gold:#c9a84c;
+  --gold-bright:#e2c268;
+  --gold-soft:rgba(201,168,76,.14);
+  --gem:#a8d8ff;
+  --sand:#f0d89a;
+  --violet:#c8b8ff;
+  --win:#a8ffcc;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:8px;
+  --radius-lg:14px;
+  --measure:1240px;
+  --gutter:clamp(20px,4vw,48px);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --speed:.4s var(--ease);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(60vw 60vw at 88% -12%,rgba(168,216,255,.07),transparent 60%),
+    radial-gradient(48vw 48vw at 4% 108%,rgba(201,168,76,.06),transparent 58%),
+    var(--ink);
+  color:var(--text);
+  font-family:var(--mono);
+  font-size:14px;
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:100;
+  pointer-events:none;
+  opacity:.028;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+::selection{background:var(--gold);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,p{margin:0}
+h1,h2{font-family:var(--serif);font-weight:300;letter-spacing:-.015em;line-height:1.02;text-wrap:balance}
+p{text-wrap:pretty}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wrap{width:100%;max-width:var(--measure);margin:0 auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:16px;top:-64px;z-index:300;background:var(--gold);color:var(--ink);padding:10px 16px;border-radius:var(--radius);font-size:12px;transition:top .2s}
+.skip:focus{top:16px}
+
+.site-header{position:sticky;top:0;z-index:50;background:rgba(7,7,10,.74);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:inline-flex;align-items:center;gap:11px;min-width:0}
+.brand img{width:30px;height:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.brand span{font-family:var(--serif);font-size:21px;letter-spacing:.01em;line-height:1}
+.brand small{display:none;color:var(--muted);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding-left:12px;margin-left:2px;border-left:1px solid var(--line-strong)}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line-strong);border-radius:var(--radius);padding:9px 14px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text);transition:border-color .25s,background-color .25s}
+.nav-cta:hover{border-color:var(--gold);background:var(--gold-soft)}
+.nav-cta svg{width:12px;height:12px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--line-strong);border-radius:var(--radius);padding:14px 20px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);background:transparent;transition:transform .2s var(--ease),border-color .25s,background-color .25s,color .25s;white-space:nowrap}
+.btn svg{width:14px;height:14px;flex:none}
+.btn:hover{border-color:rgba(168,216,255,.45);background:rgba(168,216,255,.04)}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--gold);border-color:var(--gold);color:#151106;font-weight:500}
+.btn-primary:hover{background:var(--gold-bright);border-color:var(--gold-bright)}
+.btn-small{padding:10px 14px;font-size:10px}
+
+.hero{padding-block:clamp(64px,9vh,108px) clamp(56px,8vh,92px);position:relative}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(30px,5vw,68px);align-items:center}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.label::before{content:"";width:26px;height:1px;background:var(--line-strong);flex:none}
+.hero h1{font-size:clamp(46px,7vw,98px);line-height:.94;letter-spacing:-.022em;margin-top:20px;max-width:12ch}
+.hero h1 em{font-style:italic;color:var(--text)}
+.hero-lede{margin-top:26px;max-width:44ch;color:var(--muted);font-size:14.5px;line-height:1.8}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.hero-meta span::before{content:"";width:3px;height:3px;border-radius:50%;background:var(--gold);opacity:.8}
+.hero-panel{position:relative;border:1px solid var(--line);border-radius:var(--radius-lg);background:linear-gradient(158deg,#13131c 0%,#0a0a10 74%);overflow:hidden;padding:clamp(20px,3.4vw,38px);display:flex;flex-direction:column;justify-content:space-between;min-height:clamp(340px,44vw,500px);isolation:isolate}
+.hero-panel::before{content:"";position:absolute;inset:-35%;z-index:-1;background:
+  radial-gradient(circle at 64% 36%,rgba(168,216,255,.2),transparent 46%),
+  radial-gradient(circle at 30% 74%,rgba(201,168,76,.13),transparent 46%),
+  radial-gradient(circle at 78% 84%,rgba(200,184,255,.1),transparent 40%);
+  filter:blur(18px)}
+.hero-panel::after{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.05);border-radius:9px;pointer-events:none}
+.panel-top,.panel-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);position:relative;z-index:1}
+.panel-logo{width:min(74%,330px);height:auto;margin:auto;filter:drop-shadow(0 28px 54px rgba(0,0,0,.55));position:relative;z-index:1}
+.panel-bottom a{display:inline-flex;align-items:center;gap:7px;color:var(--text);border-bottom:1px solid var(--line-strong);padding-bottom:2px;transition:border-color .2s,color .2s}
+.panel-bottom a:hover{color:var(--gold);border-color:var(--gold)}
+.panel-bottom svg{width:12px;height:12px}
+
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.012)}
+.facts-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.fact{padding:22px 20px;border-left:1px solid var(--line);min-width:0}
+.fact:first-child{border-left:0;padding-left:0}
+.fact dt{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.fact dd{margin:0;font-size:12px;color:var(--text-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fact code{font-family:var(--mono);color:var(--gem);font-size:11.5px}
+
+.section{padding-block:clamp(72px,9.5vh,124px);scroll-margin-top:80px}
+.section + .section{border-top:1px solid var(--line)}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-bottom:36px}
+.section h2{font-size:clamp(34px,4.6vw,60px);max-width:16ch}
+.section-lede{max-width:62ch;margin-top:18px;color:var(--muted);font-size:14px;line-height:1.8}
+.section-lede a{color:var(--text);border-bottom:1px solid var(--line-strong);transition:border-color .2s,color .2s}
+.section-lede a:hover{color:var(--gold);border-color:var(--gold)}
+.head-note{color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:6px}
+
+.about-story{max-width:70ch;color:var(--text-soft);font-size:15px;line-height:1.85;margin-bottom:38px}
+.about-story p + p{margin-top:16px}
+.bp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.bp-card{border:1px solid var(--line);border-radius:var(--radius-lg);background:linear-gradient(170deg,rgba(18,18,26,.92),rgba(12,12,18,.92));padding:24px;display:flex;flex-direction:column;gap:18px;transition:border-color .25s,transform .25s var(--ease)}
+.bp-card:hover{border-color:var(--line-strong);transform:translateY(-2px)}
+.bp-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.bp-top span:last-child{color:var(--gold)}
+.bp-card p{color:var(--text-soft);font-size:13px;line-height:1.8;flex:1}
+.copy-btn{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:6px;background:transparent;padding:8px 11px;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .2s,border-color .2s,background-color .2s}
+.copy-btn:hover{color:var(--text);border-color:var(--line-strong);background:rgba(255,255,255,.03)}
+.copy-btn.is-copied{color:var(--win);border-color:rgba(168,255,204,.35)}
+.copy-btn svg{width:12px;height:12px}
+.about-note{margin-top:18px;color:var(--muted);font-size:10.5px;letter-spacing:.03em}
+
+.logo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.logo-tile{border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--surface)}
+.logo-tile header,.logo-tile footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.logo-tile header{border-bottom:1px solid rgba(255,255,255,.035)}
+.logo-tile footer{border-top:1px solid rgba(255,255,255,.035);align-items:flex-end}
+.logo-tile footer p{font-size:11px;letter-spacing:0;text-transform:none;line-height:1.5}
+.logo-stage{height:clamp(270px,31vw,380px);display:grid;place-items:center;padding:32px;position:relative}
+.logo-stage img{width:min(66%,300px);height:auto}
+.logo-tile--dark .logo-stage{background:radial-gradient(circle at 54% 42%,rgba(168,216,255,.1),transparent 58%),#0b0b11}
+.logo-tile--dark .logo-stage img{filter:drop-shadow(0 22px 42px rgba(0,0,0,.52))}
+.logo-tile--light{background:#f5f5f7;border-color:rgba(0,0,0,.1)}
+.logo-tile--light header,.logo-tile--light footer{color:#62626f;border-color:rgba(0,0,0,.08)}
+.logo-tile--light header{border-bottom-color:rgba(0,0,0,.08)}
+.logo-tile--light .logo-stage{background:#f5f5f7}
+.logo-tile--light .logo-stage img{filter:drop-shadow(0 16px 28px rgba(31,31,45,.12))}
+.file-link{display:inline-flex;align-items:center;gap:7px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text);border-bottom:1px solid var(--line-strong);padding-bottom:2px;transition:color .2s,border-color .2s;white-space:nowrap}
+.file-link:hover{color:var(--gold);border-color:var(--gold)}
+.logo-tile--light .file-link{color:#1a1a24;border-color:rgba(0,0,0,.24)}
+.logo-tile--light .file-link:hover{color:#7a5f16;border-color:#7a5f16}
+.file-link svg{width:12px;height:12px}
+
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:36px}
+.rule{border-top:1px solid var(--line);padding-top:18px}
+.rule h3{font-family:var(--serif);font-size:25px;font-weight:400;letter-spacing:-.01em;margin-bottom:8px}
+.rule p{color:var(--muted);font-size:12px;line-height:1.75;max-width:36ch}
+
+.gradient-band{height:92px;border:1px solid var(--line);border-radius:var(--radius-lg);background:linear-gradient(105deg,var(--sand) 0%,var(--gem) 45%,var(--violet) 100%);display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:14px 18px;margin-bottom:18px;color:rgba(10,10,16,.72);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase}
+.swatches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.swatch{display:flex;flex-direction:column;text-align:left;border:1px solid var(--line);border-radius:12px;background:transparent;padding:0;overflow:hidden;transition:border-color .2s,transform .2s var(--ease);min-width:0}
+.swatch:hover{border-color:var(--line-strong);transform:translateY(-2px)}
+.swatch.is-copied{border-color:var(--gold)}
+.swatch-chip{height:86px;border-bottom:1px solid rgba(255,255,255,.045)}
+.swatch-body{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 13px;font-size:11px;color:var(--text-soft);min-width:0}
+.swatch-body b{font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.swatch-body span{color:var(--muted);font-size:10px;letter-spacing:.03em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.swatch-copy{margin-top:14px;color:var(--muted);font-size:10px;letter-spacing:.08em}
+
+.type-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.type-card{border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:22px}
+.type-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.type-name{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.type-role{color:var(--gold);font-size:9px;letter-spacing:.18em;text-transform:uppercase;text-align:right}
+.type-aa{font-size:clamp(72px,9vw,112px);line-height:.82;letter-spacing:-.04em}
+.type-aa--serif{font-family:var(--serif);font-weight:300}
+.type-aa--mono{font-family:var(--mono);font-weight:300;letter-spacing:-.06em}
+.type-specimen{font-size:clamp(18px,2vw,23px);line-height:1.35;color:var(--text-soft);border-top:1px solid var(--line);padding-top:20px}
+.type-specimen--serif{font-family:var(--serif)}
+.type-specimen--mono{font-family:var(--mono);font-size:14px;line-height:1.7;letter-spacing:.01em;color:var(--gem)}
+.type-weights{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:auto;font-size:10px;color:var(--muted);letter-spacing:.06em}
+.type-weights span{border-top:1px solid var(--line);padding-top:8px;flex:1;min-width:72px}
+.type-card p{color:var(--muted);font-size:12px;line-height:1.75}
+
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.stat{padding:26px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+.stat-value{font-family:var(--mono);font-size:clamp(34px,3.7vw,50px);font-weight:300;letter-spacing:-.04em;line-height:1;color:var(--text);font-variant-numeric:tabular-nums}
+.stat-value sup{font-size:.46em;color:var(--gold);vertical-align:super;letter-spacing:0}
+.stat-label{margin-top:12px;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.stat-note{margin-top:5px;font-size:11px;color:var(--text-soft);opacity:.82}
+.source-note{margin-top:22px;color:var(--muted);font-size:10px;line-height:1.8;max-width:82ch;border-left:1px solid var(--line-strong);padding-left:14px}
+.source-note a{color:var(--text-soft);border-bottom:1px solid var(--line-strong)}
+.source-note a:hover{color:var(--gold);border-color:var(--gold)}
+
+.principle{text-align:center;padding-block:clamp(88px,12vh,150px);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.principle::before{content:"";position:absolute;inset:-40% 20%;background:radial-gradient(circle at 50% 50%,rgba(168,216,255,.08),transparent 55%);pointer-events:none}
+.principle h2{font-size:clamp(44px,7.4vw,96px);line-height:.98;max-width:14ch;margin:0 auto;position:relative}
+.principle p{max-width:52ch;margin:24px auto 0;color:var(--muted);font-size:13.5px;line-height:1.85;position:relative}
+.rule-line{width:44px;height:1px;background:linear-gradient(90deg,var(--sand),var(--gem),var(--violet));margin:0 auto 28px;position:relative}
+
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:start}
+.contact-copy p{max-width:50ch;margin-top:20px;color:var(--muted);font-size:14px;line-height:1.85}
+.contact-panel{border:1px solid var(--line);border-radius:var(--radius-lg);background:linear-gradient(165deg,rgba(18,18,26,.94),rgba(11,11,17,.94));padding:clamp(22px,3vw,30px)}
+.contact-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);font-size:12px;transition:color .2s}
+.contact-row:first-child{padding-top:0}
+.contact-row:last-of-type{border-bottom:0}
+.contact-row:hover{color:var(--gold)}
+.contact-row span:first-child{color:var(--muted);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase}
+.contact-row span:last-child{display:inline-flex;align-items:center;gap:9px;color:var(--text)}
+.contact-row svg{width:12px;height:12px;flex:none}
+.contact-panel .btn{width:100%;margin-top:14px}
+.legal{margin-top:26px;color:var(--muted);font-size:10px;line-height:1.8;max-width:72ch}
+
+.site-footer{border-top:1px solid var(--line);padding-block:30px 64px}
+.footer-row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-brand{display:flex;align-items:center;gap:10px}
+.footer-brand img{width:24px;height:auto;opacity:.9}
+.footer-brand span{font-family:var(--serif);font-size:17px}
+.footer-meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.footer-meta a{display:inline-flex;align-items:center;gap:7px;transition:color .2s}
+.footer-meta a:hover{color:var(--gold)}
+.footer-meta svg{width:10px;height:10px}
+
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,12px);z-index:200;background:var(--raised);border:1px solid var(--line-strong);border-radius:999px;padding:10px 18px;font-size:11px;letter-spacing:.08em;color:var(--text);box-shadow:0 18px 50px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s var(--ease)}
+.toast.is-visible{opacity:1;transform:translate(-50%,0)}
+
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease) var(--d,0s),transform .7s var(--ease) var(--d,0s)}
+.js .reveal.in-view{opacity:1;transform:none}
+.hero-copy > *{animation:fadeUp .85s var(--ease) both}
+.hero-copy .label{animation-delay:.05s}
+.hero-copy h1{animation-delay:.12s}
+.hero-copy .hero-lede{animation-delay:.2s}
+.hero-copy .hero-actions{animation-delay:.28s}
+.hero-copy .hero-meta{animation-delay:.36s}
+.hero-panel{animation:fadeIn 1.1s var(--ease) .15s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
+
+@media (max-width:1080px){
+  .nav-links{gap:18px}
+  .hero h1{font-size:clamp(44px,6.6vw,82px)}
+}
+@media (max-width:920px){
+  .nav-links{display:none}
+  .brand small{display:inline}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+  .hero-panel{min-height:clamp(300px,60vw,420px)}
+  .hero h1{max-width:14ch}
+  .facts-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .fact:nth-child(4){border-left:0;padding-left:0}
+  .bp-grid{grid-template-columns:minmax(0,1fr)}
+  .logo-grid{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .type-grid{grid-template-columns:minmax(0,1fr)}
+  .contact-grid{grid-template-columns:minmax(0,1fr)}
+  .rules{grid-template-columns:minmax(0,1fr);gap:18px}
+}
+@media (max-width:640px){
+  :root{--gutter:18px}
+  .brand small{display:none}
+  .nav-cta{padding:8px 11px;font-size:9.5px}
+  .nav{height:58px}
+  .hero{padding-block:52px 64px}
+  .hero h1{font-size:clamp(42px,12vw,62px)}
+  .hero-lede{font-size:13.5px}
+  .hero-actions .btn{flex:1;min-width:150px}
+  .hero-panel{padding:18px;min-height:300px}
+  .panel-logo{width:min(82%,260px)}
+  .facts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fact{padding:18px 14px}
+  .fact:nth-child(odd){border-left:0;padding-left:0}
+  .fact:last-child{grid-column:1/-1;border-left:0;padding-left:0}
+  .section{padding-block:64px}
+  .section h2{font-size:clamp(32px,10vw,46px)}
+  .swatches{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gradient-band{height:76px;padding:12px 14px;font-size:8.5px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat{padding:22px 16px}
+  .logo-tile header,.logo-tile footer{padding:14px 16px;flex-wrap:wrap}
+  .logo-stage{height:250px;padding:24px}
+  .logo-stage img{width:min(78%,250px)}
+  .principle h2{font-size:clamp(40px,12vw,64px)}
+  .footer-row{align-items:flex-start;flex-direction:column}
+  .type-aa{font-size:80px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .js .reveal{opacity:1;transform:none}
+}
+@media print{
+  body{background:#fff;color:#111}
+  body::before,.site-header,.hero-actions,.toast,.copy-btn,.file-link,.skip{display:none!important}
+  .hero,.section,.principle{padding-block:28px;border-color:#ddd}
+  .hero-grid,.contact-grid,.type-grid,.logo-grid{grid-template-columns:1fr}
+  .hero-panel,.bp-card,.type-card,.contact-panel,.logo-tile{border-color:#ccc;background:#fff}
+  .logo-tile--light,.logo-tile--light .logo-stage{background:#fff}
+  .muted,.section-lede,.hero-lede,.rule p,.source-note,.legal{color:#444}
+  .stat,.fact,.rule{break-inside:avoid}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Carats press kit home">
+      <img src="v5.svg" alt="" width="30" height="23">
+      <span>Carats</span>
+      <small>Press kit</small>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#boilerplate">Boilerplate</a>
+      <a href="#logos">Logos</a>
+      <a href="#colour">Colour</a>
+      <a href="#typography">Typography</a>
+      <a href="#numbers">Numbers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#logos">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      Assets
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="label">Carats press kit · v1.0</p>
+        <h1>The <em>refined</em> framework.</h1>
+        <p class="hero-lede">Official marks, colours, typography and company facts for editors, reviewers and partners.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#logos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download assets
+          </a>
+          <a class="btn" href="#boilerplate">Read the boilerplate</a>
+        </div>
+        <p class="hero-meta">
+          <span>Updated November 2026</span>
+          <span>SVG sources</span>
+          <span>Dark and light marks</span>
+        </p>
+      </div>
+      <div class="hero-panel" role="group" aria-label="Primary Carats logo">
+        <div class="panel-top"><span>Primary mark</span><span>v5.svg</span></div>
+        <img class="panel-logo" src="v5.svg" alt="Carats diamond mark for dark surfaces" width="1984" height="1540">
+        <div class="panel-bottom">
+          <span>Transparent SVG</span>
+          <a href="v5.svg" download="carats-mark-dark.svg">Download
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="Carats at a glance">
+    <div class="wrap facts-grid">
+      <div class="fact"><dt>Product</dt><dd>Carats</dd></div>
+      <div class="fact"><dt>Category</dt><dd>Web framework</dd></div>
+      <div class="fact"><dt>Runtime</dt><dd>Bun</dd></div>
+      <div class="fact"><dt>Version</dt><dd>v1.0</dd></div>
+      <div class="fact"><dt>Install</dt><dd><code>bun create carats</code></dd></div>
+    </div>
+  </section>
+
+  <section class="section" id="boilerplate">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2>The short version.</h2>
+          <p class="section-lede">Carats is a server-rendered web framework for Bun. It sends the page as it is: no client bundle to grow, no hydration to wait on, no JavaScript between a visitor and the content.</p>
+        </div>
+        <p class="head-note">Approved copy</p>
+      </div>
+      <div class="about-story reveal">
+        <p>The project reached v1.0 with a single argument: most of what a modern site ships is excess. Carats renders on the server, returns finished HTML, and measures the result against the field's strongest contender on the same five-route application.</p>
+        <p>Use the descriptions below as written. They are kept short on purpose, and every figure mentioned is drawn from the public benchmark at carats.dev.</p>
+      </div>
+      <div class="bp-grid reveal">
+        <article class="bp-card">
+          <div class="bp-top"><span>Short</span><span>One sentence</span></div>
+          <p id="copy-short">Carats is a server-rendered web framework for Bun. Pages arrive as finished HTML, with no client bundle to hydrate, built for measured performance.</p>
+          <button class="copy-btn" type="button" data-copy-target="copy-short" aria-label="Copy the short description">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </article>
+        <article class="bp-card">
+          <div class="bp-top"><span>Standard</span><span>One paragraph</span></div>
+          <p id="copy-standard">Carats is a server-rendered web framework for Bun, built for speed without excess. It sends finished HTML with no client bundle to hydrate. In its five-route benchmark against Next.js, Carats reports a 45× smaller JavaScript payload and a 1.7× higher throughput ceiling.</p>
+          <button class="copy-btn" type="button" data-copy-target="copy-standard" aria-label="Copy the standard description">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </article>
+        <article class="bp-card">
+          <div class="bp-top"><span>Extended</span><span>Full boilerplate</span></div>
+          <p id="copy-extended">Carats is a server-rendered web framework for Bun. Its premise is simple: send the page as it is. There is no client bundle to grow and no hydration to wait on. On a measured five-route application, Carats reports 3,828 bytes of JavaScript against 173,344 bytes for Next.js, a 28× smaller build output, and a throughput ceiling of 4,256 requests per second. The framework is at v1.0, installed with bun create carats, and documented at docs.carats.dev.</p>
+          <button class="copy-btn" type="button" data-copy-target="copy-extended" aria-label="Copy the extended description">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </article>
+      </div>
+      <p class="about-note">Benchmark context: Carats on Bun 1.3.12, Next.js on Node v24.13.1. Recorded 29 September 2026. Figures are reported by Carats.</p>
+    </div>
+  </section>
+
+  <section class="section" id="logos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2>Two marks. One for each surface.</h2>
+          <p class="section-lede">Both files are transparent SVG. Use the dark-surface mark on ink and deep neutrals, and the light-surface mark on white and pale neutrals. Do not swap them.</p>
+        </div>
+        <button class="btn btn-small" type="button" id="download-all">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          Download both
+        </button>
+      </div>
+      <div class="logo-grid reveal">
+        <article class="logo-tile logo-tile--dark">
+          <header><span>On dark surfaces</span><span>v5.svg</span></header>
+          <div class="logo-stage">
+            <img src="v5.svg" alt="Carats logo for dark surfaces" width="1984" height="1540">
+          </div>
+          <footer>
+            <p>Ink, near-black and deep neutral backgrounds.</p>
+            <a class="file-link" href="v5.svg" download="carats-mark-dark.svg">Download SVG
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            </a>
+          </footer>
+        </article>
+        <article class="logo-tile logo-tile--light">
+          <header><span>On light surfaces</span><span>v5-light-2.svg</span></header>
+          <div class="logo-stage">
+            <img src="v5-light-2.svg" alt="Carats logo for light surfaces" width="1984" height="1540">
+          </div>
+          <footer>
+            <p>White, paper and pale neutral backgrounds.</p>
+            <a class="file-link" href="v5-light-2.svg" download="carats-mark-light.svg">Download SVG
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            </a>
+          </footer>
+        </article>
+      </div>
+      <div class="rules reveal">
+        <article class="rule">
+          <h3>Clear space</h3>
+          <p>Keep a margin of at least one quarter of the mark's height on every side. Nothing should enter that space.</p>
+        </article>
+        <article class="rule">
+          <h3>Minimum size</h3>
+          <p>24 px for screen use. 12 mm in print. Below that, the facet detail stops reading.</p>
+        </article>
+        <article class="rule">
+          <h3>Do not</h3>
+          <p>Do not recolour, rotate, outline or add effects. Do not place either file on a background that fights its contrast.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="colour">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2>The palette.</h2>
+          <p class="section-lede">One gradient, one ink, one accent. These are the live website values. Click any swatch to copy its hex.</p>
+        </div>
+        <p class="head-note">Click to copy</p>
+      </div>
+      <div class="gradient-band reveal" aria-label="Brand gradient">
+        <span>Sand</span><span>Aurora cut</span><span>Amethyst</span>
+      </div>
+      <div class="swatches reveal">
+        <button class="swatch" type="button" data-copy="#07070A" aria-label="Copy Ink hex 07070A">
+          <span class="swatch-chip" style="background:#07070a"></span>
+          <span class="swatch-body"><b>Ink</b><span>#07070A</span></span>
+        </button>
+        <button class="swatch" type="button" data-copy="#0E0E14" aria-label="Copy Surface hex 0E0E14">
+          <span class="swatch-chip" style="background:#0e0e14"></span>
+          <span class="swatch-body"><b>Surface</b><span>#0E0E14</span></span>
+        </button>
+        <button class="swatch" type="button" data-copy="#12121A" aria-label="Copy Raised hex 12121A">
+          <span class="swatch-chip" style="background:#12121a"></span>
+          <span class="swatch-body"><b>Raised</b><span>#12121A</span></span>
+        </button>
+        <button class="swatch" type="button" data-copy="#ECECF1" aria-label="Copy Text hex ECECF1">
+          <span class="swatch-chip" style="background:#ececf1"></span>
+          <span class="swatch-body"><b>Text</b><span>#ECECF1</span></span>
+        </button>
+        <button class="swatch" type="button" data-copy="#8B8B9C" aria-label="Copy Muted hex 8B8B9C">
+          <span class="swatch-chip" style="background:#8b8b9c"></span>
+          <span class="swatch-body"><b>Muted</b><span>#8B8B9C</span></span>
+        </button>
+        <button class="swatch" type="button" data-copy="#C9A84C" aria-label="Copy Gold hex C9A84C">
+          <span class="swatch-chip" style="background:#c9a84c"></span>
+          <span class="swatch-body"><b>Gold</b><span>#C9A84C</span></span>
+        </button>
+        <button class="swatch" type="button" data-copy="#A8D8FF" aria-label="Copy Gem hex A8D8FF">
+          <span class="swatch-chip" style="background:#a8d8ff"></span>
+          <span class="swatch-body"><b>Gem</b><span>#A8D8FF</span></span>
+        </button>
+        <button class="swatch" type="button" data-copy="#A8FFCC" aria-label="Copy Win hex A8FFCC">
+          <span class="swatch-chip" style="background:#a8ffcc"></span>
+          <span class="swatch-body"><b>Win</b><span>#A8FFCC</span></span>
+        </button>
+      </div>
+      <p class="swatch-copy">Gradient: linear-gradient(105deg, #F0D89A 0%, #A8D8FF 45%, #C8B8FF 100%).</p>
+    </div>
+  </section>
+
+  <section class="section" id="typography">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2>The type.</h2>
+          <p class="section-lede">A high-contrast serif for display and a measured mono for everything practical. Two families, no third.</p>
+        </div>
+      </div>
+      <div class="type-grid reveal">
+        <article class="type-card">
+          <div class="type-top"><span class="type-name">Cormorant Garamond</span><span class="type-role">Display</span></div>
+          <div class="type-aa type-aa--serif">Aa</div>
+          <p class="type-specimen type-specimen--serif">Every facet, measured.</p>
+          <p>Headlines, pull quotes and the wordmark. Set light, with generous size and tight leading. Available on Google Fonts.</p>
+          <div class="type-weights"><span>Light 300</span><span>Regular 400</span><span>Semibold 600</span></div>
+        </article>
+        <article class="type-card">
+          <div class="type-top"><span class="type-name">DM Mono</span><span class="type-role">Utility</span></div>
+          <div class="type-aa type-aa--mono">Aa</div>
+          <p class="type-specimen type-specimen--mono">bun create carats</p>
+          <p>Interface, labels, code and body copy. Use tabular figures for measurements. Available on Google Fonts.</p>
+          <div class="type-weights"><span>Light 300</span><span>Regular 400</span><span>Medium 500</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="numbers">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2>The appraisal.</h2>
+          <p class="section-lede">Every claim Carats makes is measured against the field's strongest contender on the same five-route application.</p>
+        </div>
+        <p class="head-note">Reported by Carats</p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><div class="stat-value">45<sup>×</sup></div><div class="stat-label">Smaller JavaScript payload</div><div class="stat-note">3,828 B vs 173,344 B</div></div>
+        <div class="stat"><div class="stat-value">32<sup>×</sup></div><div class="stat-label">Lighter page weight</div><div class="stat-note">5,436 B vs 176,227 B</div></div>
+        <div class="stat"><div class="stat-value">28<sup>×</sup></div><div class="stat-label">Smaller build output</div><div class="stat-note">1.81 MB vs 51.21 MB</div></div>
+        <div class="stat"><div class="stat-value">4,256</div><div class="stat-label">Peak requests per second</div><div class="stat-note">Next.js: 2,442 rps</div></div>
+        <div class="stat"><div class="stat-value">316<sup>ms</sup></div><div class="stat-label">Production server startup</div><div class="stat-note">Next.js: 880 ms</div></div>
+        <div class="stat"><div class="stat-value">2</div><div class="stat-label">Assets per page</div><div class="stat-note">Next.js: 8</div></div>
+      </div>
+      <p class="source-note reveal">Method: each framework answered 300 sequential requests, then 2,000 at each of five concurrency levels. Carats on Bun 1.3.12, Next.js on Node v24.13.1. Recorded 29 September 2026. <a href="https://carats.dev" target="_blank" rel="noopener">See the full benchmark at carats.dev</a>.</p>
+    </div>
+  </section>
+
+  <section class="principle" aria-label="Brand principle">
+    <div class="wrap">
+      <div class="rule-line" aria-hidden="true"></div>
+      <h2>We cut only the excess.</h2>
+      <p>No client bundle to grow. No hydration to wait on. No JavaScript between a visitor and the content.</p>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap contact-grid reveal">
+      <div class="contact-copy">
+        <h2>Press enquiries.</h2>
+        <p>For interviews, review access, comment or asset formats beyond SVG, contact the team through carats.dev. The documentation is the fastest route for technical detail.</p>
+        <p class="legal">The Carats name and mark identify the project. Use them only to refer to Carats, without alteration or implied endorsement.</p>
+      </div>
+      <div class="contact-panel">
+        <a class="contact-row" href="https://carats.dev" target="_blank" rel="noopener">
+          <span>Website</span>
+          <span>carats.dev
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </span>
+        </a>
+        <a class="contact-row" href="https://docs.carats.dev/en/latest" target="_blank" rel="noopener">
+          <span>Documentation</span>
+          <span>docs.carats.dev
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </span>
+        </a>
+        <a class="btn btn-primary" href="#logos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          Download assets
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <img src="v5.svg" alt="" width="24" height="19">
+      <span>Carats</span>
+    </div>
+    <div class="footer-meta">
+      <span>Press kit v1.0</span>
+      <span>Updated November 2026</span>
+      <a href="#top">Back to top
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const toast = document.getElementById('toast');
+let toastTimer;
+
+function showToast(message){
+  toast.textContent = message;
+  toast.classList.add('is-visible');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2000);
+}
+
+async function copyText(text){
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (error) {
+    const field = document.createElement('textarea');
+    field.value = text;
+    field.setAttribute('readonly', '');
+    field.style.position = 'fixed';
+    field.style.opacity = '0';
+    document.body.appendChild(field);
+    field.focus();
+    field.select();
+    let copied = false;
+    try { copied = document.execCommand('copy'); } catch (err) { copied = false; }
+    document.body.removeChild(field);
+    return copied;
+  }
+}
+
+function bindCopyLabel(button, copied){
+  const label = button.querySelector('span');
+  if (!label || button.dataset.busy === 'true') return;
+  const original = label.textContent;
+  button.dataset.busy = 'true';
+  if (copied) {
+    button.classList.add('is-copied');
+    label.textContent = 'Copied';
+  }
+  setTimeout(() => {
+    button.classList.remove('is-copied');
+    label.textContent = original;
+    button.dataset.busy = 'false';
+  }, 1700);
+}
+
+document.querySelectorAll('[data-copy-target]').forEach(button => {
+  button.addEventListener('click', async () => {
+    const target = document.getElementById(button.dataset.copyTarget);
+    if (!target) return;
+    const copied = await copyText(target.textContent.replace(/\s+/g, ' ').trim());
+    bindCopyLabel(button, copied);
+    showToast(copied ? 'Boilerplate copied' : 'Copy failed');
+  });
+});
+
+document.querySelectorAll('[data-copy]').forEach(button => {
+  button.addEventListener('click', async () => {
+    const value = button.dataset.copy;
+    const copied = await copyText(value);
+    if (copied) {
+      button.classList.add('is-copied');
+      setTimeout(() => button.classList.remove('is-copied'), 1200);
+    }
+    showToast(copied ? value + ' copied' : 'Copy failed');
+  });
+});
+
+const downloadAll = document.getElementById('download-all');
+if (downloadAll) {
+  downloadAll.addEventListener('click', () => {
+    const files = [
+      ['v5.svg', 'carats-mark-dark.svg'],
+      ['v5-light-2.svg', 'carats-mark-light.svg']
+    ];
+    files.forEach(([source, name], index) => {
+      const link = document.createElement('a');
+      link.href = source;
+      link.download = name;
+      document.body.appendChild(link);
+      setTimeout(() => {
+        link.click();
+        link.remove();
+      }, index * 220);
+    });
+    showToast('Downloading both marks');
+  });
+}
+
+const revealItems = document.querySelectorAll('.reveal');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!reduceMotion && 'IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  revealItems.forEach(item => observer.observe(item));
+} else {
+  revealItems.forEach(item => item.classList.add('in-view'));
+}
+</script>
+</body>
+</html>

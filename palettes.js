@@ -367,5 +367,46 @@ var palettes = [
             '--color-facet-8': '#AFEEEE', '--color-facet-10': '#87CEEB', '--color-facet-14': '#87CEFA',
             '--color-facet-15': '#B0E0E6',
         }
+    },
+    {
+        name: "31. v5 (Midnight Aurora)",
+        gradient: { stops: [['0', '#f0d89a'], ['.45', '#a8d8ff'], ['1', '#c8b8ff']] },
+        tokens: {
+            '--color-stroke-all': '#26263A', '--color-fill-center': '#26263A',
+            '--color-facet-1': '#26263A', '--color-facet-12': '#2D2D44', '--color-facet-13': '#35354F',
+            '--color-facet-3': '#35354F', '--color-facet-5': '#2D2D44', '--color-facet-7': '#26263A',
+            '--color-facet-9': '#35354F', '--color-facet-11': '#2D2D44',
+            '--color-facet-2': '#2D2D44', '--color-facet-4': '#26263A', '--color-facet-6': '#35354F',
+            '--color-facet-8': '#2D2D44', '--color-facet-10': '#26263A', '--color-facet-14': '#2D2D44',
+            '--color-facet-15': '#35354F'
+        }
+    },
+    {
+        name: "32. v5 Dark (Midnight Aurora)",
+        bg: "bg-slate-900 border-slate-700",
+        text: "text-white",
+        gradient: { stops: [['0', '#f0d89a'], ['.45', '#a8d8ff'], ['1', '#c8b8ff']] },
+        tokens: {
+            '--color-stroke-all': '#26263A', '--color-fill-center': '#26263A',
+            '--color-facet-1': '#26263A', '--color-facet-12': '#2D2D44', '--color-facet-13': '#35354F',
+            '--color-facet-3': '#35354F', '--color-facet-5': '#2D2D44', '--color-facet-7': '#26263A',
+            '--color-facet-9': '#35354F', '--color-facet-11': '#2D2D44',
+            '--color-facet-2': '#2D2D44', '--color-facet-4': '#26263A', '--color-facet-6': '#35354F',
+            '--color-facet-8': '#2D2D44', '--color-facet-10': '#26263A', '--color-facet-14': '#2D2D44',
+            '--color-facet-15': '#35354F'
+        }
+    },
+    {
+        name: "33. v5 Swap (Midnight Aurora)",
+        gradient: { stops: [['0', '#f0d89a'], ['.45', '#a8d8ff'], ['1', '#c8b8ff']], target: 'facets', units: 'userSpaceOnUse', x1: 100, y1: 100, x2: 1880, y2: 1420 },
+        tokens: {
+            '--color-stroke-all': '#35354F', '--color-fill-center': '#35354F',
+            '--color-facet-1': '#26263A', '--color-facet-12': '#2D2D44', '--color-facet-13': '#35354F',
+            '--color-facet-3': '#35354F', '--color-facet-5': '#2D2D44', '--color-facet-7': '#26263A',
+            '--color-facet-9': '#35354F', '--color-facet-11': '#2D2D44',
+            '--color-facet-2': '#2D2D44', '--color-facet-4': '#26263A', '--color-facet-6': '#35354F',
+            '--color-facet-8': '#2D2D44', '--color-facet-10': '#26263A', '--color-facet-14': '#2D2D44',
+            '--color-facet-15': '#35354F'
+        }
     }
 ];
